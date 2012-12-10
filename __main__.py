@@ -1,8 +1,17 @@
 import bitdeli
-from bitdeli.widgets import Group, Text, Bar, set_theme
+from bitdeli.widgets import Users, Map, Group, Text, Bar, set_theme
 
 import random
 from zipfile import ZipFile
+
+HASHES = ['205e460b479e2e5b48aec07710c08d50',
+          '25c7c18223fb42a4c6ae1c8db6f50f9b',
+          'x',
+          'f0a7bfdc9c509e8ea02b3ad25ba768b6',
+          'b42c651650ec8d3d95829c75e318af2d',
+          'd0ae789ef12347de8ec30b3765dd5d89',
+          'x',
+          '476d8afffbfa06fa852e677848c2388d']
 
 for profile in bitdeli.profiles():
     pass
@@ -70,7 +79,7 @@ Text(head='Tinkercad, Flowdock etc.',
      group=g_jyri,
      color=2)
 Text(head='JS, Visualization hacker',
-     size=(5, 3),
+     size=(5, 4),
      group=g_jyri,
      color=2)
 
@@ -138,6 +147,8 @@ Text(head='Target any vertical in particular',
 Text(head='Produce the prettiest visualizations',
      size=(12, 1),
      color=2)
+Text(head='',
+     size=(12, 2))
 
 # slide 8 
 
@@ -201,12 +212,109 @@ Text(head='',
      size=(12, 3))
 
 # slide 13
+
 Text(head='why hackers?',
-     size=(12, 3))
+     size=(12, 2))
 Text(head='',
-     size=(5, 3))
+     size=(3, 2))
 Text(head='==',
-     size=(7, 3),
+     size=(9, 2),
      color=2)
 Text(head='why Bitdeli?',
+     size=(12, 2))
+Text(head='',
      size=(12, 3))
+
+# slide 14
+
+Text(head='1) Customize',
+     size=(12, 8),
+     color=3)
+
+# slide 15
+
+Text(head='2) Be Lazy',
+     size=(12, 8),
+     color=3)
+
+# slide 16
+
+Text(head='3) Experiment',
+     size=(12, 8),
+     color=3)
+
+# slide 17
+
+Text(head='4) Share',
+     size=(12, 8),
+     color=3)
+
+# slide 18
+
+Text(head='Why Bitdeli is the easiest way to',
+     size=(12, 2))
+Text(head='hack custom analytics?',
+     size=(12, 7),
+     color=2)
+
+# slide 19
+
+Text(head='1) Simple Python',
+     size=(12, 8),
+     color=1)
+
+# slide 20
+
+Text(head='2) User-Centric',
+     size=(12, 8),
+     color=1)
+
+# slide 21
+
+Text(head='3) Built-in Visualizations',
+     size=(12, 2),
+     color=1)
+
+g_left = Group(layout='vertical')
+g_right = Group(layout='vertical')
+
+Map(size=(6, 5),
+    data={'IN': 30},
+    color=2,
+    group=g_left)
+
+def bar_data():
+    for i, month in enumerate(['%.2d/11' % m for m in range(6, 13)] +
+                              ['%.2d/12' % m for m in range(1, 3)]):
+        yield month, 100 + abs(i - 6) * 25 + random.randint(1, 50)
+
+Bar(size=(6, 3),
+    color=1,
+    data=list(bar_data()),
+    group=g_right)
+
+Users(size=(6, 2),
+      large=True,
+      data=[{'gravatar_hash': h} for h in HASHES],
+      group=g_right)
+
+Text(head='',
+     size=(12, 2))
+
+# slide 22
+
+Text(head='4) Solid Platform',
+     size=(12, 8),
+     color=1)
+
+# slide 23
+
+Text(head='Thank You!',
+     size=(12, 2),
+     color=1)
+Text(head='Sign Up for FREE at',
+     size=(12, 2),
+     color=2)
+Text(head='bitdeli.com',
+     size=(12, 2),
+     color=1)
