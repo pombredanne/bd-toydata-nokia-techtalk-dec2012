@@ -1,11 +1,13 @@
 import bitdeli
 from bitdeli.widgets import Group, Text, Bar, set_theme
 
+import random
 from zipfile import ZipFile
 
 for profile in bitdeli.profiles():
     pass
 
+random.seed(1)
 set_theme('playground')
 
 # slide 1
@@ -118,3 +120,93 @@ Text(head='Total 2007-2012:',
 Text(head='%d Hadoop startups' % total,
      size=(12, 4),
      color=2)
+
+
+# slide 7
+
+Text(head='Bitdeli does NOT',
+     size=(12, 2))
+Text(head='Scale to the largest datasets',
+     size=(12, 1),
+     color=2)
+Text(head='Provide the lowest latencies',
+     size=(12, 1),
+     color=2)
+Text(head='Target any vertical in particular',
+     size=(12, 1),
+     color=2)
+Text(head='Produce the prettiest visualizations',
+     size=(12, 1),
+     color=2)
+
+# slide 8 
+
+for i in range(10):
+    Text(head='why?',
+         size=(random.randint(1, 4), 2),
+         color=random.randint(0, 3))
+Text(head='',
+     size=(12, 2))
+
+# slide 9
+
+Text(head='Infrastructure for ',
+     size=(5, 2))
+Text(head='Big Data',
+     size=(4, 2),
+     color=2)
+Text(head='is becoming',
+     size=(3, 2))
+Text(head='a commodity',
+     size=(12, 6),
+     color=2)
+
+# slide 10
+
+Text(head='Integrating ',
+     size=(8, 2))
+Text(head='data',
+     size=(4, 3),
+     color=2)
+Text(head='to business',
+     size=(5, 5),
+     color=2)
+Text(head='is almost as hard as it has ever been',
+     size=(7, 2))
+
+# slide 11
+
+Text(head='Who are in the best position',
+     size=(12, 2))
+Text(head='to solve this problem in the companies?',
+     size=(12, 2))
+Text(head='CEOs?',
+     size=(3, 3),
+     color=0)
+Text(head='CIOs?',
+     size=(3, 3),
+     color=1)
+Text(head='Business Analysts?',
+     size=(6, 5),
+     color=2)
+
+# slide 12
+
+Text(head='Hackers.',
+     size=(12, 4))
+Text(head='(given the right tools)',
+     size=(12, 1),
+     color=2)
+Text(head='',
+     size=(12, 3))
+
+# slide 13
+Text(head='why hackers?',
+     size=(12, 3))
+Text(head='',
+     size=(5, 3))
+Text(head='==',
+     size=(7, 3),
+     color=2)
+Text(head='why Bitdeli?',
+     size=(12, 3))
