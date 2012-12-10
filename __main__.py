@@ -233,23 +233,17 @@ Text(head='1) Customize',
 
 # slide 15
 
-Text(head='2) Be Lazy',
+Text(head='2) Experiment',
      size=(12, 8),
      color=3)
 
 # slide 16
 
-Text(head='3) Experiment',
+Text(head='3) Share',
      size=(12, 8),
      color=3)
 
 # slide 17
-
-Text(head='4) Share',
-     size=(12, 8),
-     color=3)
-
-# slide 18
 
 Text(head='Why Bitdeli is the easiest way to',
      size=(12, 2))
@@ -257,19 +251,19 @@ Text(head='hack custom analytics?',
      size=(12, 7),
      color=2)
 
-# slide 19
+# slide 18
 
 Text(head='1) Simple Python',
      size=(12, 8),
      color=1)
 
-# slide 20
+# slide 19
 
 Text(head='2) User-Centric',
      size=(12, 8),
      color=1)
 
-# slide 21
+# slide 20
 
 Text(head='3) Built-in Visualizations',
      size=(12, 2),
@@ -299,11 +293,17 @@ Users(size=(6, 2),
       group=g_right)
 
 Text(head='',
-     size=(12, 2))
+     size=(12, 3))
+
+# slide 21
+
+Text(head='4) Real-Time',
+     size=(12, 8),
+     color=1)
 
 # slide 22
 
-Text(head='4) Solid Platform',
+Text(head='5) Solid Platform',
      size=(12, 8),
      color=1)
 
