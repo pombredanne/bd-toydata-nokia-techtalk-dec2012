@@ -1,8 +1,11 @@
 import bitdeli
-from bitdeli.widgets import Users, Map, Group, Text, Bar, set_theme
+from bitdeli.widgets import Users, Map, Group, Text, Bar, set_theme, Title, Description
 
 import random
 from zipfile import ZipFile
+
+Title('Nokia Tech Talk')
+Description("Ville's slides for the presentation at Nokia in Decemeber 2012")
 
 HASHES = ['205e460b479e2e5b48aec07710c08d50',
           '25c7c18223fb42a4c6ae1c8db6f50f9b',
