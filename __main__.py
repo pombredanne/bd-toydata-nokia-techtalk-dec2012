@@ -318,3 +318,5 @@ Text(head='Sign Up for FREE at',
 Text(head='bitdeli.com',
      size=(12, 2),
      color=1)
+Text(head='',
+     size=(12, 5))
