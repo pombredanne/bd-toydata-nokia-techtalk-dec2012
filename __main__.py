@@ -10,6 +10,8 @@ set_theme('playground')
 
 # slide 1
 
+Text(head='',
+     size=(12, 1))
 Text(head='Bitdeli',
      size=(12, 3))
 Text(head='Ville Tuulos | Co-Founder | CEO',
@@ -70,9 +72,49 @@ Text(head='JS, Visualization hacker',
      group=g_jyri,
      color=2)
 
-#Text(head='Why?',
-#     size=(12, 12))
-#
-#Text(head='Bitdeli is the 531th 
+# slide 4
 
-print ZipFile('/tmp/worker').read('data/companies-by-year.txt')
+Text(head='why?',
+     size=(12, 3))
+
+g_trendy = Group(layout='horizontal')
+Text(head='Bitdeli is the',
+     size=(3, 3),
+     group=g_trendy)
+Text(head='531st',
+     size=(3, 5),
+     color=2,
+     group=g_trendy)
+Text(head='trendy analytics startup',
+     size=(6, 3),
+     group=g_trendy)
+
+# slide 5
+
+corpdataraw = ZipFile('/tmp/worker').read('data/companies-by-year.txt')
+corpdata = [map(int, reversed(line.strip().split()))
+            for line in corpdataraw.splitlines()]
+total = sum(count for year, count in corpdata)
+Bar(data=corpdata,
+    size=(12, 3),
+    color=1)
+Text(head='Total 2007-2012:',
+     size=(6, 1))
+Text(head='%d new analytics startups' % total,
+     size=(12, 4),
+     color=2)
+
+# slide 6
+
+hadpdataraw = ZipFile('/tmp/worker').read('data/hadoop-by-year.txt')
+hadpdata = [map(int, reversed(line.strip().split()))
+            for line in hadpdataraw.splitlines()]
+total = sum(count for year, count in hadpdata)
+Bar(data=hadpdata,
+    size=(12, 3),
+    color=1)
+Text(head='Total 2007-2012:',
+     size=(6, 1))
+Text(head='%d Hadoop startups' % total,
+     size=(12, 4),
+     color=2)
